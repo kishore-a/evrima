@@ -8,6 +8,9 @@ import images from "../../../assets/images/Login.png"
 const Login = () => {
   const [email, setemail] = useState("yourmail@example.com")
   const [password, setpassword] = useState("Password")
+  function printhello() {
+    console.log('Hello')
+  }
 
   return (
     <View style={{ height: '100%', width: '100%', }}>
@@ -37,7 +40,7 @@ const Login = () => {
           </View>
         </View>
         <View style={{ marginTop: 100, alignItems: 'center' }}>
-          <TouchableOpacity onPress={console.log('Hello')} >
+          <TouchableOpacity onPress={printhello} >
             <View style={{
               height: 60, width: 250, backgroundColor: '#252537', borderRadius: 10, alignItems: 'center', justifyContent: 'center', shadowColor: "#000",
               shadowOffset: {
@@ -57,10 +60,16 @@ const Login = () => {
 
         <View style={{ marginLeft: 50, marginTop: 100 }}>
           <View>
-            <Text style={{ color: '#585A66', fontSize: 18, fontFamily: 'Montserrat' }}>Don't have an account ?</Text>
+            <TouchableOpacity onPress={printhello}>
+              <Text style={{ color: '#585A66', fontSize: 18, fontFamily: 'Montserrat' }}>Don't have an account ?</Text>
+
+            </TouchableOpacity>
           </View>
           <View style={{ marginTop: 20 }}>
-            <Text style={{ color: '#585A66', fontSize: 18, fontFamily: 'Montserrat' }}>Sign up</Text>
+            <TouchableOpacity>
+              <Text style={{ color: '#585A66', fontSize: 18, fontFamily: 'Montserrat' }}>Sign up</Text>
+
+            </TouchableOpacity>
           </View>
         </View>
       </ImageBackground >
